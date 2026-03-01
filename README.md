@@ -6,4 +6,4 @@ ________________________________________________________________________________
 #LAB 2
 [Lab 2 – User Management and Permissions](Lab2.md)
 
-	-This lab explains how to manage user and groups, switch between regular users and root, to create and delete users, modify passwords, and grant sudo privileges. Also explores file permissions, changing permissions using chmod, and manage Access Control List using setfacl.
+This lab explains how to manage user and groups, switch between regular users and root, to create and delete users, modify passwords, and grant sudo privileges. Also explores file permissions, changing permissions using chmod, and manage Access Control List using setfacl.
