@@ -59,7 +59,7 @@ Environment variables affect how programs run, they can be modify directly in th
 ![My Screenshot](lab3images/2.6.png)
 
 	-First I created the vul.c file, changed the owner to root and set it as a Set-UID program
-	-Also created a temp ls file, and gave executable permission.
+	-Also created a temporary ls file, and gave executable permission.
 	-I modified the path environment variable to prioritize the current directory.
 	-As a result when running ./vul file, the ls file was executed instead, this happened because the system used the path variable to run the command.
 	
@@ -82,27 +82,26 @@ Environment variables affect how programs run, they can be modify directly in th
 
 	-First I ran the program as a normal user, and the LD_PRELOAD variable was ignored when the program was ran.
 	-After I exported my shared library and ran myprog again, but the shared library was still not used when ran.
-	-Lastly I creeated a user, gave myprog ownership to that user and set it as Set-UID program, exported LD_PRELOAD again but it was still ignored when ran.
-	-The reason for this outcome its baceuase Set-UID programs dont allow environment variables (like; LD_PRELOAD) to be used.
+	-Lastly I created a user, gave myprog ownership to that user and set it as Set-UID program, exported LD_PRELOAD again but it was still ignored when ran.
+	-The reason for this outcome its because Set-UID programs don't allow environment variables (like; LD_PRELOAD) to be used.
 	
 #2.8. Invoking External Programs Using system() versus execve()
 ![My Screenshot](lab3images/2.8.png)
 
-	-
+	-The catall.c file was complied and set as Set-UID root program.
+	-The file was executed as a normal user and /etc/passwd was passed as an argument, which displayed its content.
+	-This show that even though the file is set as Set-UID root program, a normal user can access files that normally require root access.
 
 ![My Screenshot](lab3images/2.8a.png)
-
-	-	
-
 ![My Screenshot](lab3images/2.8b.png)
 
 	-	
 
 
 #2.9. Capability Leaking
-![My Screenshot](lab3images/2.9.png)
+![My Screenshot](lab3images/2.9a.png)
 
-	-	
+	-
 	
 	
 	
