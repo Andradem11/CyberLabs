@@ -95,14 +95,17 @@ Environment variables affect how programs run, they can be modify directly in th
 ![My Screenshot](lab3images/2.8a.png)
 ![My Screenshot](lab3images/2.8b.png)
 
-	-	
-
+	-Two different commands were ran in the same line separated by ";", this shows a vulnerability since I was able to create a remove files. 	
+	-This vulnerability shows how an attacker can inject additional commands and execute them with root privileges, which can potentially compromise the system.
+	-Lastly I replaced system(command) with execve(v[0], v, NULL);, which makes the command more secured while executed, it no longer allows the use of ";" to run multiple commands at once.
 
 #2.9. Capability Leaking
 ![My Screenshot](lab3images/2.9a.png)
 
-	-
-	
+	-First I created the file /etc/zzz and set its permissions so the root can only write to it.
+	-I compiled cap_leak.c, changed the owner to root, and made it a Set-UID program.
+	-The file was executed which printed "fd is 3" meaning the file was opened with root privileges.
+	-I was able to write to the file "zzz" using the file descriptor showing a capability leaking vulnerability.
 	
 	
 	
